@@ -9,7 +9,7 @@ else
     echo "The Given number $NUMBER is greater than or equal to 10"
 fi 
 
-#If the Given Number matches then
+#If the Given Number matches
 if [ $NUMBER -eq 10 ]; then
     echo "The Given Number $NUMBER Matches the Number 10"
 else
