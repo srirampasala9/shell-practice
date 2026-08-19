@@ -11,3 +11,4 @@ if [ $USERID -ne 0 ]; then
     echo "ERROR:: User does not have the root access"
 else
     echo "User have the root access"
+fi
