@@ -4,7 +4,7 @@
 
 USERID=$(id -u) # If the user has root access then the value will be 0
 
-if [ $USERID -ne 0]; then
+if [ $USERID -ne 0 ]; then
     echo "ERROR:: User does not have the root access please run the script with root privelege"
 fi
 
