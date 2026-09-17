@@ -16,17 +16,17 @@ VALIDATE(){
         echo "Installing $2 success"
     fi
 }
-#Instatlling Mysql
+#Installing Mysql
 
 dnf install mysql -y
-VALIDATE $1 "MYSQL"
+VALIDATE $? "MYSQL"
 
 #Installing Nginx
 
 dnf install nginx -y
-VALIDATE $1 "NGINX"
+VALIDATE $? "NGINX"
 
 
 #Installing Python
 dnf install python3 -y
-VALIDATE $1 "Python"
+VALIDATE $? "Python"
