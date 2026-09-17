@@ -1,8 +1,17 @@
 #!/bin/bash
 
-USERID=$(id -u)
-if [ $USERID -eq 0 ]; then
-    dnf install mysql -y
-else 
-    echo "ERROR::Unable to install the user does not have the root have access, to install mysql run this script with the root access"
-fi 
+#check whether the user has root access or not
+
+USERID=$(id -u) # If the user has root access then the value will be 0
+
+if [ $USERID -ne 0]; then
+    echo "ERROR:: User does not have the root access please run the script with root privelege"
+fi
+
+dnf install mysql -y
+
+if [$? -ne 0]; then
+    echo "ERROR::Mysql Installation failure"
+else
+    echo "Installing mysql success"
+fi
